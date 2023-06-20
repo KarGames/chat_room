@@ -4,9 +4,12 @@ import sys
 
 c = socket.socket()
 host = socket.gethostname()
-port = 5050
+port = 7979
 
 name = input("enter username: ")
+
+def get_name():
+    return name
 
 c.connect((host, port))
 c.send(name.encode('utf-8'))
